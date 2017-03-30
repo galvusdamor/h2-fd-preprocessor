@@ -3,7 +3,7 @@
  * goals, initial state),
  * then calls functions to build causal graph, domain_transition_graphs and
  * successor generator
- * finally prints output to file "output"
+ * finally prints output to file "output.sas"
  */
 
 #include "helper_functions.h"
