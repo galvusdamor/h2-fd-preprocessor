@@ -264,7 +264,7 @@ void Operator::remove_ambiguity(const H2Mutexes &h2) {
             bool conflict = false;
             for (size_t k = 0; !conflict && k < preconditions.size(); k++)
                 if (preconditions[k] != -1)
-                    conflict = h2.are_mutex(var, j, i, preconditions[i]);
+                    conflict = h2.are_mutex(var, j, k, preconditions[k]);
 
             if (!conflict)
                 potential_preconditions.push_back(make_pair(var, j));
