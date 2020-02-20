@@ -8,6 +8,10 @@
 #include <fstream>
 using namespace std;
 
+
+Operator::Operator() : spurious(false) {
+}
+
 Operator::Operator(istream &in, const vector<Variable *> &variables) : spurious(false) {
     check_magic(in, "begin_operator");
     in >> ws;

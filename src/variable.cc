@@ -8,6 +8,14 @@
 
 using namespace std;
 
+Variable::Variable(int range) {
+    values.resize(range);
+    level = -1;
+    necessary = false;
+    reachable_values = range;
+    reachable = vector<bool> (range, true);
+}
+
 Variable::Variable(istream &in) {
     int range;
     check_magic(in, "begin_variable");

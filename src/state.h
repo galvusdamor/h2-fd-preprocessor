@@ -9,8 +9,8 @@ using namespace std;
 class Variable;
 
 class State {
-    map<Variable *, int> values;
 public:
+    map<Variable *, int> values;
     State() {} // TODO: Entfernen (erfordert kleines Redesign)
     State(istream &in, const vector<Variable *> &variables);
 

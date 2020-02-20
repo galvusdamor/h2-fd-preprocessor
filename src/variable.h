@@ -6,14 +6,15 @@
 using namespace std;
 
 class Variable {
-    vector<string> values;
-    string name;
-    int layer;
     int level;
     bool necessary;
     vector<bool> reachable; //atorralba: added to prune unreachable values
     int reachable_values;
 public:
+    vector<string> values;
+    string name;
+    int layer;
+    Variable(int range);
     Variable(istream &in);
     void set_level(int level);
     void set_necessary();

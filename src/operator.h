@@ -72,12 +72,13 @@ public:
         }
     };
 
-private:
+public:
     string name;
     vector<Prevail> prevail;  // var, val
     vector<PrePost> pre_post;  // var, old-val, new-val
     int cost;
-    bool spurious;
+	int operatorID;
+	bool spurious;
 
     std::vector<std::pair<int, int>> augmented_preconditions;
     std::vector<std::pair<int, int>> potential_preconditions;
@@ -85,6 +86,7 @@ private:
     std::vector<std::pair<Variable *, int>> augmented_preconditions_var;
     std::vector<std::pair<Variable *, int>> potential_preconditions_var;
 public:
+    Operator();
     Operator(istream &in, const vector<Variable *> &variables);
 
     void strip_unimportant_effects();
